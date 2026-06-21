@@ -1,0 +1,67 @@
+.experience {
+  background:
+    radial-gradient(ellipse at 90% 20%, rgba(184,146,63,0.08), transparent 50%),
+    var(--color-cream);
+}
+
+.experience__head {
+  margin-bottom: clamp(2.5rem, 6vw, 4rem);
+}
+
+.experience__timeline {
+  position: relative;
+  display: grid;
+  gap: 0;
+}
+
+.experience__timeline::before {
+  content: '';
+  position: absolute;
+  left: 27px;
+  top: 14px;
+  bottom: 14px;
+  width: 1px;
+  background: linear-gradient(180deg, var(--color-gold), rgba(184,146,63,0.1));
+}
+
+.experience__step {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: clamp(1.2rem, 3vw, 2.4rem);
+  padding: clamp(1.4rem, 2.6vw, 2rem) 0;
+  align-items: flex-start;
+}
+
+.experience__marker {
+  position: relative;
+  z-index: 1;
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  border: 1px solid var(--color-gold);
+  background: var(--color-ivory);
+  font-family: var(--font-display);
+  font-size: 1rem;
+  color: var(--color-gold-deep);
+  box-shadow: 0 14px 30px -16px rgba(143, 111, 44, 0.4);
+}
+
+.experience__body h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.experience__body p {
+  max-width: 62ch;
+  color: var(--color-text-soft);
+  font-size: 0.92rem;
+  font-weight: 400;
+}
+
+@media (max-width: 640px) {
+  .experience__timeline::before { left: 23px; }
+  .experience__marker { width: 46px; height: 46px; font-size: 0.85rem; }
+  .experience__step { grid-template-columns: 46px 1fr; }
+}
