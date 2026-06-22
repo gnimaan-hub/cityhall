@@ -2,15 +2,15 @@ import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import './Gallery.css'
 
-import stage from '../assets/images/stage-arch-1.jpg'
-import tables1 from '../assets/images/hall-tables-wide-1.jpg'
-import tables2 from '../assets/images/hall-tables-wide-2.jpg'
-import doors from '../assets/images/entrance-doors.jpg'
-import facade from '../assets/images/exterior-facade.jpg'
-import centerpiece from '../assets/images/table-centerpiece.jpg'
-import drapery from '../assets/images/drapery-detail.jpg'
-import crystals from '../assets/images/crystal-curtain.jpg'
-import salle from '../assets/images/salle-reception.jpg'
+import stage from '../assets/images/stage-arch-1.webp'
+import tables1 from '../assets/images/hall-tables-wide-1.webp'
+import tables2 from '../assets/images/hall-tables-wide-2.webp'
+import doors from '../assets/images/entrance-doors.webp'
+import facade from '../assets/images/exterior-facade.webp'
+import centerpiece from '../assets/images/table-centerpiece.webp'
+import drapery from '../assets/images/drapery-detail.webp'
+import crystals from '../assets/images/crystal-curtain.webp'
+import salle from '../assets/images/salle-reception.webp'
 
 const PHOTOS = [
   { src: stage, title: 'L’estrade & l’arche dorée', tag: 'Scénographie', span: 'tall' },
@@ -51,6 +51,10 @@ export default function Gallery() {
             viewport={{ once: true, amount: 0.2 }}
             transition={{ duration: 0.7, delay: (i % 3) * 0.08, ease: [0.22, 1, 0.36, 1] }}
             onClick={() => setLightbox(p)}
+            role="button"
+            tabIndex={0}
+            aria-label={`Agrandir : ${p.title}`}
+            onKeyDown={(e) => e.key === 'Enter' && setLightbox(p)}
           >
             <img src={p.src} alt={p.title} loading="lazy" />
             <figcaption>

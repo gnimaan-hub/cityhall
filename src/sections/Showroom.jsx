@@ -1,8 +1,8 @@
 import { useState } from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 import Panorama360 from '../components/Panorama360.jsx'
-import panoCeremonie from '../assets/panoramas/scene-ceremonie.jpg'
-import panoReception from '../assets/panoramas/scene-reception.jpg'
+import panoCeremonie from '../assets/panoramas/scene-ceremonie.webp'
+import panoReception from '../assets/panoramas/scene-reception.webp'
 import './Showroom.css'
 
 const SCENES = [
@@ -63,7 +63,7 @@ export default function Showroom() {
   }
 
   return (
-    <section id="showroom" className="showroom">
+    <section className="showroom">
       <div className="showroom__head container">
         <span className="eyebrow">Showroom virtuel 360°</span>
         <h2 className="section-title">

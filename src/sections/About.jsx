@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import salleImg from '../assets/images/salle-reception.jpg'
+import salleImg from '../assets/images/salle-reception.webp'
 import './About.css'
 
 const fade = {
@@ -24,7 +24,7 @@ export default function About() {
           viewport={{ once: true, amount: 0.3 }}
           transition={{ duration: 1.1, ease: [0.22, 1, 0.36, 1] }}
         >
-          <img src={salleImg} alt="Intérieur de la salle de réception Le City Hall, décor blanc et or" />
+          <img src={salleImg} alt="Intérieur de la salle de réception Le City Hall, décor blanc et or" loading="lazy" decoding="async" />
           <div className="about__visual-frame" />
           <span className="about__visual-tag">La grande salle &mdash; configuration mariage</span>
         </motion.div>

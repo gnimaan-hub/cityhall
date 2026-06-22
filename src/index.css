@@ -4,7 +4,7 @@
   --color-sand: #e9dcc4;
   --color-ivory: #fffdf8;
   --color-text: #4a4032;
-  --color-text-soft: rgba(74, 64, 50, 0.66);
+  --color-text-soft: rgba(74, 64, 50, 0.82);
   --color-text-softer: rgba(74, 64, 50, 0.45);
   --color-charcoal: #2c2519;
   --color-gold: #b8923f;
@@ -65,7 +65,7 @@ p { margin: 0; }
   font-size: 0.72rem;
   letter-spacing: 0.35em;
   text-transform: uppercase;
-  color: var(--color-gold-deep);
+  color: #7a5a22;
 }
 
 .eyebrow::before {
@@ -73,7 +73,7 @@ p { margin: 0; }
   display: block;
   width: 28px;
   height: 1px;
-  background: var(--color-gold-deep);
+  background: #7a5a22;
 }
 
 h1, h2, h3, h4 {
@@ -139,14 +139,14 @@ section {
 }
 
 .btn-solid {
-  background: var(--color-gold);
+  background: var(--color-gold-deep);
   color: var(--color-ivory);
-  border-color: var(--color-gold);
+  border-color: var(--color-gold-deep);
 }
 
 .btn-solid:hover {
-  background: var(--color-gold-deep);
-  border-color: var(--color-gold-deep);
+  background: #7a5a22;
+  border-color: #7a5a22;
 }
 
 .btn-ghost {

@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion'
-import heroImg from '../assets/images/stage-arch-1.jpg'
+import heroImg from '../assets/images/stage-arch-1.webp'
 import './Hero.css'
 
 const fadeUp = {
@@ -18,6 +18,8 @@ export default function Hero() {
         <motion.img
           src={heroImg}
           alt="L'estrade et l'arche dorée du City Hall, Djibouti"
+          fetchpriority="high"
+          decoding="async"
           initial={{ scale: 1.12 }}
           animate={{ scale: 1 }}
           transition={{ duration: 6, ease: [0.22, 1, 0.36, 1] }}
@@ -30,15 +32,9 @@ export default function Hero() {
           Showroom virtuel &mdash; Djibouti
         </motion.span>
 
-        <motion.div variants={fadeUp} initial="hidden" animate="show" custom={1}>
-          <motion.h1
-            className="hero__title"
-            animate={{ y: [0, -12, 0] }}
-            transition={{ duration: 7, repeat: Infinity, ease: 'easeInOut', delay: 1.6 }}
-          >
-            LE CITY HALL
-          </motion.h1>
-        </motion.div>
+        <motion.h1 className="hero__title" variants={fadeUp} initial="hidden" animate="show" custom={1}>
+          LE CITY HALL
+        </motion.h1>
 
         <motion.p className="hero__tagline" variants={fadeUp} initial="hidden" animate="show" custom={2}>
           Une <em>expérience immersive</em> avant même de franchir la porte.<br />

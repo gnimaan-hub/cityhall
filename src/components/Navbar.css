@@ -66,9 +66,9 @@
 .nav__links {
   display: flex;
   gap: 2.1rem;
-  font-size: 0.78rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.14em;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
 }
 
@@ -99,7 +99,7 @@
 }
 
 .nav__cta {
-  font-size: 0.7rem;
+  font-size: 0.8rem;
   padding: 0.7rem 1.5rem;
   white-space: nowrap;
 }
